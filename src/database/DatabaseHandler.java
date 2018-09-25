@@ -12,16 +12,24 @@ import java.sql.SQLException;
 
 public class DatabaseHandler {
 	
-	private static DatabaseHandler handler;
+	private static DatabaseHandler handler = null;
 	
 	private static String DB_URL = "jdbc:derby:database;create=true";
 	private static Connection conn = null;
 	private static Statement stmt = null;
 	
 	
-	public DatabaseHandler() {
+	private DatabaseHandler() {
 		createConnection();
 		setupBookTable();
+		setupMemberTable();
+	}
+	
+	public static DatabaseHandler getInstance() {
+			if (handler == null) {
+				handler = new DatabaseHandler();
+			}
+			return handler;
 	}
 	
 	void createConnection() {
@@ -63,6 +71,33 @@ public class DatabaseHandler {
 		
 		
 	}
+	
+	private void setupMemberTable() {
+		
+		String TABLE_NAME = "MEMBER";
+		
+		try {
+			stmt = conn.createStatement();
+			DatabaseMetaData dbm = conn.getMetaData();
+			ResultSet tables = dbm.getTables(null, null, TABLE_NAME.toUpperCase(), null);
+			
+			if (tables.next()) {
+				System.out.println("Table " + TABLE_NAME + " already exists. We're good to go!");
+			} else {
+				stmt.execute("CREATE TABLE " + TABLE_NAME + " ("
+						+ "		id varchar(200) primary key, \n"
+						+ "		name varchar(200),\n"
+						+ "		phone varchar(20),\n"
+						+ "		email varchar(100),\n"
+						+ " )" );
+			}
+			
+		} catch (SQLException e) {
+			System.err.println(e.getMessage() + " ... set up Database");
+			e.printStackTrace();
+		}		
+	}
+
 	
 	public ResultSet executeQuery(String query) {
 		

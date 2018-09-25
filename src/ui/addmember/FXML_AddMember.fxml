@@ -8,11 +8,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="rootPane" prefHeight="280.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.addbook.AddBookController">
+<AnchorPane prefHeight="277.0" prefWidth="471.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.addmember.AddMemberController">
    <children>
-      <VBox prefHeight="400.0" prefWidth="350.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <VBox prefHeight="282.0" prefWidth="436.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <JFXTextField fx:id="titleTxt" alignment="TOP_LEFT" labelFloat="true" promptText="Book Title">
+            <JFXTextField fx:id="nameTxt" alignment="TOP_LEFT" labelFloat="true" promptText="Name">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -23,7 +23,7 @@
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="idTxt" alignment="TOP_LEFT" labelFloat="true" promptText="Book ID">
+            <JFXTextField fx:id="idTxt" alignment="TOP_LEFT" labelFloat="true" promptText="ID Number">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -34,7 +34,7 @@
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="authorTxt" alignment="TOP_LEFT" labelFloat="true" promptText="Book Author">
+            <JFXTextField fx:id="phoneTxt" alignment="TOP_LEFT" labelFloat="true" promptText="Phone Number">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -45,7 +45,7 @@
                   <Font size="13.0" />
                </font>
             </JFXTextField>
-            <JFXTextField fx:id="publisherTxt" alignment="TOP_LEFT" labelFloat="true" promptText="Publisher">
+            <JFXTextField fx:id="emailTxt" alignment="TOP_LEFT" labelFloat="true" promptText="E-mail">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -61,14 +61,14 @@
                   <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
                </VBox.margin>
                <children>
-                  <JFXButton fx:id="saveBtn" onAction="#addBook" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: #b9b9b9;" stylesheets="@addBookStyle.css" text="Save">
+                  <JFXButton fx:id="saveBtn" onAction="#addMember" prefHeight="43.0" prefWidth="220.0" style="-fx-background-color: #b9b9b9;" stylesheets="@../addbook/addBookStyle.css" text="Save">
                      <HBox.margin>
-                        <Insets right="5.0" />
+                        <Insets left="5.0" right="5.0" />
                      </HBox.margin>
                   </JFXButton>
-                  <JFXButton fx:id="cancelBtn" onAction="#cancel" prefHeight="43.0" prefWidth="200.0" style="-fx-background-color: #b9b9b9;" stylesheets="@addBookStyle.css" text="Cancel">
+                  <JFXButton fx:id="cancelBtn" onAction="#cancel" prefHeight="43.0" prefWidth="220.0" style="-fx-background-color: #b9b9b9;" stylesheets="@../addbook/addBookStyle.css" text="Cancel">
                      <HBox.margin>
-                        <Insets left="5.0" />
+                        <Insets left="5.0" right="5.0" />
                      </HBox.margin>
                   </JFXButton>
                </children>
