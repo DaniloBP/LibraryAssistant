@@ -14,7 +14,11 @@ public class DatabaseHandler {
 	
 	private static DatabaseHandler handler = null;
 	
-	private static String DB_URL = "jdbc:derby:database;create=true";
+	private final String DRIVER = "com.mysql.jdbc.Driver";
+	private final String URL = "jdbc:mysql://localhost:3306/library"; 
+	private final String USER = "root"; 
+	private final String PASS = "1234"; 
+	
 	private static Connection conn = null;
 	private static Statement stmt = null;
 	
@@ -34,10 +38,14 @@ public class DatabaseHandler {
 	
 	void createConnection() {
 		try {
-			Class.forName("org.apache.derby.jdbc.EmbeddedDriver").newInstance();
-			conn = DriverManager.getConnection(DB_URL);
+			Class.forName(DRIVER).newInstance();
+			conn = DriverManager.getConnection(URL, USER, PASS);
 			
-		} catch (Exception e) {
+		} catch (ClassNotFoundException | SQLException e) {
+			throw new RuntimeException("Erro na conexão com BD: ", e);
+		} catch (InstantiationException e) {
+			e.printStackTrace();
+		} catch (IllegalAccessException e) {
 			e.printStackTrace();
 		} 
 		
@@ -55,13 +63,14 @@ public class DatabaseHandler {
 			if (tables.next()) {
 				System.out.println("Table " + TABLE_NAME + " already exists. We're good to go!");
 			} else {
-				stmt.execute("CREATE TABLE " + TABLE_NAME + " ("
-						+ "		id varchar(200) primary key, \n"
-						+ "		title varchar(200),\n"
-						+ "		author varchar(200),\n"
-						+ "		publisher varchar(100),\n"
-						+ " 	isAvail boolean default true"
-						+ " )" );
+				stmt.execute(	"CREATE TABLE " + TABLE_NAME + " ("
+							+ "		id varchar(50) NOT NULL primary key, \n"
+							+ "		title varchar(200) NOT NULL,\n"
+							+ "		author varchar(100),\n"
+							+ "		publisher varchar(100),\n"
+							+ " 	isAvail boolean default true"
+							+ " ) DEFAULT CHARSET = utf8;" 
+							);
 			}
 			
 		} catch (SQLException e) {
@@ -84,12 +93,13 @@ public class DatabaseHandler {
 			if (tables.next()) {
 				System.out.println("Table " + TABLE_NAME + " already exists. We're good to go!");
 			} else {
-				stmt.execute("CREATE TABLE " + TABLE_NAME + " ("
-						+ "		id varchar(200) primary key, \n"
-						+ "		name varchar(200),\n"
-						+ "		phone varchar(20),\n"
-						+ "		email varchar(100),\n"
-						+ " )" );
+				stmt.execute("	CREATE TABLE " + TABLE_NAME + " ("
+							+ "		id varchar(50) NOT NULL primary key, \n"
+							+ "		name varchar(100),\n"
+							+ "		phone varchar(20),\n"
+							+ "		email varchar(100),\n"
+							+ " ) DEFAULT CHARSET = utf8;" 
+							);
 			}
 			
 		} catch (SQLException e) {

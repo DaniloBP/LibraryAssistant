@@ -62,7 +62,8 @@ public class AddBookController implements Initializable {
 			return;
 		}
 		
-		String action = "INSERT INTO BOOK VALUES (" 
+		String action = "INSERT INTO BOOK (id, title, author, publisher, isAvail)"
+						+ " VALUES (" 
 						+ "'" + bookID + "', "
 						+ "'" + bookTitle + "', "
 						+ "'" + bookAuthor + "', "
@@ -93,7 +94,7 @@ public class AddBookController implements Initializable {
     
     void checkData() {
     	
-    	String query = "SELECT title FROM BOOK";   
+    	String query = "SELECT title FROM BOOK;";   
     	ResultSet rs = databaseHandler.executeQuery(query);
     	
     	try {
