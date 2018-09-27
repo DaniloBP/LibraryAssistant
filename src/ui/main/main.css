@@ -1,0 +1,14 @@
+.mainFxmlClass {
+	
+}
+.setup-button{
+	-fx-background-color: #606E63;
+	-fx-text-fill: #c6d5df;
+	-fx-font-weight: bold;
+	-fx-font-size: 13px;
+}
+.setup-button:hover{
+	-fx-background-color: #B0BCB3;
+	-fx-text-fill: #2E2E2E;
+	-fx-font-weight: bold;
+}

@@ -21,280 +21,301 @@
 <?import javafx.scene.text.Text?>
 
 <StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
-   <children>
-      <BorderPane prefHeight="200.0" prefWidth="664.0">
-         <top>
-            <MenuBar BorderPane.alignment="CENTER">
-              <menus>
-                <Menu mnemonicParsing="false" text="File">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Close" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Edit">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="Delete" />
-                  </items>
-                </Menu>
-                <Menu mnemonicParsing="false" text="Help">
-                  <items>
-                    <MenuItem mnemonicParsing="false" text="About" />
-                  </items>
-                </Menu>
-              </menus>
-            </MenuBar>
-         </top>
-         <right>
-            <VBox prefHeight="463.0" prefWidth="150.0" BorderPane.alignment="CENTER">
-               <children>
-                  <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="139.0" style="-fx-background-color: #AAC7CB;" text="Add Member">
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../FontAwesomeFX/user-plus.png" />
-                           </image></ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <VBox.margin>
-                        <Insets bottom="2.0" top="2.0" />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="139.0" style="-fx-background-color: #AAC7CB;" text="Add Book">
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../FontAwesomeFX/book.png" />
-                           </image></ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <VBox.margin>
-                        <Insets bottom="2.0" />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="139.0" style="-fx-background-color: #AAC7CB;" text="View Members">
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../FontAwesomeFX/users.png" />
-                           </image></ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <VBox.margin>
-                        <Insets bottom="2.0" />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton contentDisplay="TOP" prefHeight="150.0" prefWidth="139.0" style="-fx-background-color: #AAC7CB;" text="View Books">
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../FontAwesomeFX/books.png" />
-                           </image></ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <VBox.margin>
-                        <Insets bottom="2.0" />
-                     </VBox.margin>
-                  </JFXButton>
-                  <JFXButton contentDisplay="TOP" layoutX="10.0" layoutY="241.0" prefHeight="150.0" prefWidth="139.0" style="-fx-background-color: #AAC7CB;" text="Settings">
-                     <graphic>
-                        <ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
-                           <image>
-                              <Image url="@../../../../FontAwesomeFX/settings.png" />
-                           </image>
-                        </ImageView>
-                     </graphic>
-                     <cursor>
-                        <Cursor fx:constant="HAND" />
-                     </cursor>
-                     <VBox.margin>
-                        <Insets bottom="2.0" />
-                     </VBox.margin>
-                  </JFXButton>
-               </children>
-            </VBox>
-         </right>
-         <center>
-            <TabPane prefHeight="200.0" prefWidth="625.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
-              <tabs>
-                <Tab text="Book Issue">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <VBox prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <children>
-                                    <HBox alignment="CENTER" prefHeight="200.0" prefWidth="604.0">
-                                       <children>
-                                          <JFXTextField alignment="CENTER" labelFloat="true" prefWidth="200.0" promptText="Enter Book ID">
-                                             <HBox.margin>
-                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                             </HBox.margin>
-                                             <padding>
-                                                <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
-                                             </padding>
-                                          </JFXTextField>
-                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="468.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name" textAlignment="CENTER" wrappingWidth="416.88671875">
-                                                   <font>
-                                                      <Font size="13.0" />
-                                                   </font>
-                                                   <VBox.margin>
-                                                      <Insets top="10.0" />
-                                                   </VBox.margin>
-                                                </Text>
-                                                <Text layoutX="10.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" textAlignment="CENTER" wrappingWidth="416.88671875">
-                                                   <font>
-                                                      <Font size="13.0" />
-                                                   </font>
-                                                   <VBox.margin>
-                                                      <Insets top="10.0" />
-                                                   </VBox.margin>
-                                                </Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="604.0">
-                                       <children>
-                                          <JFXTextField alignment="CENTER" labelFloat="true" prefWidth="200.0" promptText="Enter Member ID">
-                                             <HBox.margin>
-                                                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-                                             </HBox.margin>
-                                             <padding>
-                                                <Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
-                                             </padding>
-                                          </JFXTextField>
-                                          <VBox alignment="CENTER" prefHeight="200.0" prefWidth="468.0">
-                                             <children>
-                                                <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER" wrappingWidth="416.88671875">
-                                                   <font>
-                                                      <Font size="13.0" />
-                                                   </font>
-                                                   <VBox.margin>
-                                                      <Insets top="10.0" />
-                                                   </VBox.margin>
-                                                </Text>
-                                                <Text layoutX="10.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID" textAlignment="CENTER" wrappingWidth="416.88671875">
-                                                   <font>
-                                                      <Font size="13.0" />
-                                                   </font>
-                                                   <VBox.margin>
-                                                      <Insets top="10.0" />
-                                                   </VBox.margin>
-                                                </Text>
-                                             </children>
-                                          </VBox>
-                                       </children>
-                                    </HBox>
-                                    <HBox alignment="CENTER" prefHeight="99.0" prefWidth="604.0">
-                                       <children>
-                                          <JFXButton buttonType="RAISED" style="-fx-background-color: #AAC7CB;" text="Issue">
-                                             <font>
-                                                <Font name="System Bold" size="14.0" />
-                                             </font>
-                                             <padding>
-                                                <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
-                                             </padding>
-                                             <cursor>
-                                                <Cursor fx:constant="HAND" />
-                                             </cursor>
-                                             <HBox.margin>
-                                                <Insets bottom="10.0" top="10.0" />
-                                             </HBox.margin>
-                                          </JFXButton>
-                                       </children>
-                                       <VBox.margin>
-                                          <Insets bottom="10.0" />
-                                       </VBox.margin>
-                                       <padding>
-                                          <Insets bottom="10.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </children>
-                              </VBox>
-                           </children></AnchorPane>
-                  </content>
-                </Tab>
-                <Tab text="Renew/Submit">
-                  <content>
-                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                           <children>
-                              <BorderPane prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-                                 <top>
-                                    <JFXTextField alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Enter Book ID" BorderPane.alignment="CENTER">
-                                       <BorderPane.margin>
-                                          <Insets left="170.0" right="170.0" top="10.0" />
-                                       </BorderPane.margin>
-                                    </JFXTextField>
-                                 </top>
-                                 <center>
-                                    <ListView prefHeight="380.0" prefWidth="604.0" BorderPane.alignment="CENTER">
-                                       <padding>
-                                          <Insets left="20.0" right="20.0" top="10.0" />
-                                       </padding>
-                                       <BorderPane.margin>
-                                          <Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
-                                       </BorderPane.margin>
-                                    </ListView>
-                                 </center>
-                                 <bottom>
-                                    <HBox alignment="CENTER" prefHeight="66.0" prefWidth="604.0" BorderPane.alignment="CENTER">
-                                       <children>
-                                          <JFXButton buttonType="RAISED" style="-fx-background-color: #AAC7CB;" text="Renovar Empréstimo">
-                                             <HBox.margin>
-                                                <Insets left="10.0" right="10.0" />
-                                             </HBox.margin>
-                                             <padding>
-                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                             </padding>
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                             <cursor>
-                                                <Cursor fx:constant="HAND" />
-                                             </cursor>
-                                          </JFXButton>
-                                          <JFXButton buttonType="RAISED" layoutX="282.0" layoutY="31.0" style="-fx-background-color: #AAC7CB;" text="Encerrar Empréstimo">
-                                             <HBox.margin>
-                                                <Insets left="10.0" right="10.0" />
-                                             </HBox.margin>
-                                             <padding>
-                                                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
-                                             </padding>
-                                             <font>
-                                                <Font size="13.0" />
-                                             </font>
-                                             <cursor>
-                                                <Cursor fx:constant="HAND" />
-                                             </cursor>
-                                          </JFXButton>
-                                       </children>
-                                       <BorderPane.margin>
-                                          <Insets bottom="10.0" top="5.0" />
-                                       </BorderPane.margin>
-                                       <padding>
-                                          <Insets bottom="20.0" top="10.0" />
-                                       </padding>
-                                    </HBox>
-                                 </bottom>
-                              </BorderPane>
-                           </children></AnchorPane>
-                  </content>
-                </Tab>
-              </tabs>
-               <BorderPane.margin>
-                  <Insets right="20.0" />
-               </BorderPane.margin>
-            </TabPane>
-         </center>
-      </BorderPane>
-   </children>
+	<children>
+		<BorderPane prefHeight="200.0" prefWidth="664.0">
+			<top>
+				<MenuBar BorderPane.alignment="CENTER">
+					<menus>
+						<Menu mnemonicParsing="false" text="File">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Close" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Edit">
+							<items>
+								<MenuItem mnemonicParsing="false" text="Delete" />
+							</items>
+						</Menu>
+						<Menu mnemonicParsing="false" text="Help">
+							<items>
+								<MenuItem mnemonicParsing="false" text="About" />
+							</items>
+						</Menu>
+					</menus>
+				</MenuBar>
+			</top>
+			<right>
+				<VBox prefHeight="463.0" prefWidth="150.0" BorderPane.alignment="CENTER">
+					<children>
+						<JFXButton fx:id="addMemberBtn" contentDisplay="TOP" onAction="#loadAddMember" prefHeight="150.0" prefWidth="139.0" styleClass="setup-button" stylesheets="@main.css" text="Add Member">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/user_plus-6b9bbb.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" top="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="addBookBtn" contentDisplay="TOP" onAction="#loadAddBook" prefHeight="150.0" prefWidth="139.0" styleClass="setup-button" stylesheets="@main.css" text="Add Book">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/book-6b9bbb.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="viewMembersBtn" contentDisplay="TOP" onAction="#loadViewMembers" prefHeight="150.0" prefWidth="139.0" styleClass="setup-button" stylesheets="@main.css" text="View Members">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/users-2f382e.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="viewBooksBtn" contentDisplay="TOP" onAction="#loadViewBooks" prefHeight="150.0" prefWidth="139.0" styleClass="setup-button" stylesheets="@main.css" text="View Books">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/books-6b9bbb.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+						<JFXButton fx:id="settingsBtn" contentDisplay="TOP" layoutX="10.0" layoutY="241.0" onAction="#loadSettings" prefHeight="150.0" prefWidth="139.0" styleClass="setup-button" stylesheets="@main.css" text="Settings">
+							<graphic>
+								<ImageView fitHeight="34.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+									<image>
+										<Image url="@../../images/squared_settings-6b9bbb.png" />
+									</image>
+								</ImageView>
+							</graphic>
+							<cursor>
+								<Cursor fx:constant="HAND" />
+							</cursor>
+							<VBox.margin>
+								<Insets bottom="2.0" />
+							</VBox.margin>
+							<font>
+								<Font size="13.0" />
+							</font>
+						</JFXButton>
+					</children>
+				</VBox>
+			</right>
+			<center>
+				<TabPane prefHeight="200.0" prefWidth="625.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+					<tabs>
+						<Tab text="Book Issue">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<VBox prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<children>
+												<HBox alignment="CENTER" prefHeight="200.0" prefWidth="604.0">
+													<children>
+														<JFXTextField alignment="CENTER" labelFloat="true" prefWidth="200.0" promptText="Enter Book ID">
+															<HBox.margin>
+																<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+															</HBox.margin>
+															<padding>
+																<Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+															</padding>
+														</JFXTextField>
+														<VBox alignment="CENTER" prefHeight="200.0" prefWidth="468.0">
+															<children>
+																<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name" textAlignment="CENTER" wrappingWidth="416.88671875">
+																	<font>
+																		<Font size="13.0" />
+																	</font>
+																	<VBox.margin>
+																		<Insets top="10.0" />
+																	</VBox.margin>
+																</Text>
+																<Text layoutX="10.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" textAlignment="CENTER" wrappingWidth="416.88671875">
+																	<font>
+																		<Font size="13.0" />
+																	</font>
+																	<VBox.margin>
+																		<Insets top="10.0" />
+																	</VBox.margin>
+																</Text>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="604.0">
+													<children>
+														<JFXTextField alignment="CENTER" labelFloat="true" prefWidth="200.0" promptText="Enter Member ID">
+															<HBox.margin>
+																<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+															</HBox.margin>
+															<padding>
+																<Insets bottom="10.0" left="10.0" right="10.0" top="5.0" />
+															</padding>
+														</JFXTextField>
+														<VBox alignment="CENTER" prefHeight="200.0" prefWidth="468.0">
+															<children>
+																<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Member Name" textAlignment="CENTER" wrappingWidth="416.88671875">
+																	<font>
+																		<Font size="13.0" />
+																	</font>
+																	<VBox.margin>
+																		<Insets top="10.0" />
+																	</VBox.margin>
+																</Text>
+																<Text layoutX="10.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Member ID" textAlignment="CENTER" wrappingWidth="416.88671875">
+																	<font>
+																		<Font size="13.0" />
+																	</font>
+																	<VBox.margin>
+																		<Insets top="10.0" />
+																	</VBox.margin>
+																</Text>
+															</children>
+														</VBox>
+													</children>
+												</HBox>
+												<HBox alignment="CENTER" prefHeight="99.0" prefWidth="604.0">
+													<children>
+														<JFXButton buttonType="RAISED" styleClass="setup-button" stylesheets="@main.css" text="Issue">
+															<font>
+																<Font name="System Bold" size="14.0" />
+															</font>
+															<padding>
+																<Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+															</padding>
+															<cursor>
+																<Cursor fx:constant="HAND" />
+															</cursor>
+															<HBox.margin>
+																<Insets bottom="10.0" top="10.0" />
+															</HBox.margin>
+														</JFXButton>
+													</children>
+													<VBox.margin>
+														<Insets bottom="10.0" />
+													</VBox.margin>
+													<padding>
+														<Insets bottom="10.0" top="10.0" />
+													</padding>
+												</HBox>
+											</children>
+										</VBox>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+						<Tab text="Renew/Submit">
+							<content>
+								<AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+									<children>
+										<BorderPane prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+											<top>
+												<JFXTextField alignment="CENTER" prefHeight="25.0" prefWidth="150.0" promptText="Enter Book ID" BorderPane.alignment="CENTER">
+													<BorderPane.margin>
+														<Insets left="170.0" right="170.0" top="10.0" />
+													</BorderPane.margin>
+												</JFXTextField>
+											</top>
+											<center>
+												<ListView prefHeight="380.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+													<padding>
+														<Insets left="20.0" right="20.0" top="10.0" />
+													</padding>
+													<BorderPane.margin>
+														<Insets bottom="10.0" left="10.0" right="10.0" top="20.0" />
+													</BorderPane.margin>
+												</ListView>
+											</center>
+											<bottom>
+												<HBox alignment="CENTER" prefHeight="66.0" prefWidth="604.0" BorderPane.alignment="CENTER">
+													<children>
+														<JFXButton buttonType="RAISED" styleClass="setup-button" stylesheets="@main.css" text="Renovar Empréstimo">
+															<HBox.margin>
+																<Insets left="10.0" right="10.0" />
+															</HBox.margin>
+															<padding>
+																<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+															</padding>
+															<font>
+																<Font size="13.0" />
+															</font>
+															<cursor>
+																<Cursor fx:constant="HAND" />
+															</cursor>
+														</JFXButton>
+														<JFXButton buttonType="RAISED" layoutX="282.0" layoutY="31.0" styleClass="setup-button" stylesheets="@main.css" text="Encerrar Empréstimo">
+															<HBox.margin>
+																<Insets left="10.0" right="10.0" />
+															</HBox.margin>
+															<padding>
+																<Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+															</padding>
+															<font>
+																<Font size="13.0" />
+															</font>
+															<cursor>
+																<Cursor fx:constant="HAND" />
+															</cursor>
+														</JFXButton>
+													</children>
+													<BorderPane.margin>
+														<Insets bottom="10.0" top="5.0" />
+													</BorderPane.margin>
+													<padding>
+														<Insets bottom="20.0" top="10.0" />
+													</padding>
+												</HBox>
+											</bottom>
+										</BorderPane>
+									</children>
+								</AnchorPane>
+							</content>
+						</Tab>
+					</tabs>
+					<BorderPane.margin>
+						<Insets right="20.0" />
+					</BorderPane.margin>
+				</TabPane>
+			</center>
+		</BorderPane>
+	</children>
 </StackPane>
