@@ -14,8 +14,8 @@ public class DatabaseHandler {
 	
 	private static DatabaseHandler handler = null;
 	
-	private final String DRIVER = "com.mysql.jdbc.Driver";
-	private final String URL = "jdbc:mysql://localhost:3306/library"; 
+	private final String DRIVER = "com.mysql.cj.jdbc.Driver";
+	private final String URL = "jdbc:mysql://localhost:3306/library?useTimezone=true&serverTimezone=UTC"; 
 	private final String USER = "root"; 
 	private final String PASS = "1234"; 
 	
@@ -69,7 +69,7 @@ public class DatabaseHandler {
 							+ "		author varchar(100),\n"
 							+ "		publisher varchar(100),\n"
 							+ " 	isAvail boolean default true"
-							+ " ) DEFAULT CHARSET = utf8;" 
+							+ " ) DEFAULT CHARSET = UTF8MB4;" 
 							);
 			}
 			
@@ -97,8 +97,8 @@ public class DatabaseHandler {
 							+ "		id varchar(50) NOT NULL primary key, \n"
 							+ "		name varchar(100),\n"
 							+ "		phone varchar(20),\n"
-							+ "		email varchar(100),\n"
-							+ " ) DEFAULT CHARSET = utf8;" 
+							+ "		email varchar(100)\n"
+							+ " ) DEFAULT CHARSET = UTF8MB4;" 
 							);
 			}
 			
