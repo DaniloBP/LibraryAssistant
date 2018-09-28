@@ -20,7 +20,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="488.0" prefWidth="754.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="550.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.MainController">
 	<children>
 		<BorderPane prefHeight="200.0" prefWidth="664.0">
 			<top>
@@ -149,9 +149,9 @@
 									<children>
 										<VBox prefHeight="434.0" prefWidth="604.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
 											<children>
-												<HBox alignment="CENTER" prefHeight="200.0" prefWidth="604.0">
+												<HBox fx:id="bookInfo" alignment="CENTER" prefHeight="200.0" prefWidth="604.0" style="-fx-background-color: #e7e7e7;">
 													<children>
-														<JFXTextField alignment="CENTER" labelFloat="true" prefWidth="200.0" promptText="Enter Book ID">
+														<JFXTextField fx:id="bookIdTxt" alignment="CENTER" labelFloat="true" onAction="#loadBookInfo" prefHeight="32.0" prefWidth="210.0" promptText="Enter Book ID">
 															<HBox.margin>
 																<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 															</HBox.margin>
@@ -161,7 +161,7 @@
 														</JFXTextField>
 														<VBox alignment="CENTER" prefHeight="200.0" prefWidth="468.0">
 															<children>
-																<Text strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name" textAlignment="CENTER" wrappingWidth="416.88671875">
+																<Text fx:id="bookNameLabel" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Name" textAlignment="CENTER" wrappingWidth="416.88671875">
 																	<font>
 																		<Font size="13.0" />
 																	</font>
@@ -169,7 +169,7 @@
 																		<Insets top="10.0" />
 																	</VBox.margin>
 																</Text>
-																<Text layoutX="10.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" textAlignment="CENTER" wrappingWidth="416.88671875">
+																<Text fx:id="bookAuthorLabel" layoutX="10.0" layoutY="85.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Author" textAlignment="CENTER" wrappingWidth="416.88671875">
 																	<font>
 																		<Font size="13.0" />
 																	</font>
@@ -177,13 +177,24 @@
 																		<Insets top="10.0" />
 																	</VBox.margin>
 																</Text>
+                                                <Text fx:id="bookStatusLabel" layoutX="29.0" layoutY="121.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book Status" textAlignment="CENTER" wrappingWidth="416.88671875">
+                                                   <font>
+                                                      <Font size="13.0" />
+                                                   </font>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                </Text>
 															</children>
 														</VBox>
 													</children>
+                                       <VBox.margin>
+                                          <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                       </VBox.margin>
 												</HBox>
-												<HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="604.0">
+												<HBox fx:id="memberInfo" alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="604.0" style="-fx-background-color: #e7e7e7;">
 													<children>
-														<JFXTextField alignment="CENTER" labelFloat="true" prefWidth="200.0" promptText="Enter Member ID">
+														<JFXTextField fx:id="memberIdTxt" alignment="CENTER" labelFloat="true" prefHeight="32.0" prefWidth="210.0" promptText="Enter Member ID">
 															<HBox.margin>
 																<Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
 															</HBox.margin>
@@ -212,6 +223,9 @@
 															</children>
 														</VBox>
 													</children>
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="20.0" right="20.0" top="10.0" />
+                                       </VBox.margin>
 												</HBox>
 												<HBox alignment="CENTER" prefHeight="99.0" prefWidth="604.0">
 													<children>
@@ -231,7 +245,7 @@
 														</JFXButton>
 													</children>
 													<VBox.margin>
-														<Insets bottom="10.0" />
+														<Insets bottom="10.0" left="20.0" right="20.0" />
 													</VBox.margin>
 													<padding>
 														<Insets bottom="10.0" top="10.0" />
